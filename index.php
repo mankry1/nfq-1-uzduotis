@@ -10,7 +10,7 @@
   <div class="main">
     <div class="message" style="background:#617da2;"><a href="order_item.php">Užsakymas</a></div>
     <div class="message" style="background:#466081;"><a href="order_list.php">Užsakymų sąrašas</a></div>
-    <div class="message" style="background:#222;"><a href="http://github.com/">GitHub</a></div>
+    <div class="message" style="background:#222;"><a href="https://github.com/mankry1/nfq-1-uzduotis">GitHub</a></div>
     <div class="main_bottom">
       Sukūrė: Mantas Kryževičius
     </div>
