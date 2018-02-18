@@ -4,7 +4,7 @@
   <title>Kompiuterių surinkimas</title>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
   <meta http-equiv="Content-Style-Type" content="text/css" />
-  <link rel="stylesheet" type="text/css" media="screen" href="/style/main.css?t=<?php echo time(); ?>" />
+  <link rel="stylesheet" type="text/css" media="screen" href="style/main.css?t=<?php echo time(); ?>" />
 </head>
 <body>
   <div class="main">
