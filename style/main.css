@@ -1,0 +1,231 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+*{
+	font-size: 12px;
+	color:#333;
+	font-family: Arial !important;
+}
+a{
+  color:inherit;
+  text-decoration:none;
+}
+body{
+	background:#eeeeee;
+  font-size:12px !important;
+}
+.main_top, .error_list, .message, .main_bottom{
+	font-size: 0;
+  background:#f2f2f2;
+  padding: 12px 18px;
+  line-height:18px;
+}
+.error_list{
+  background:#e95151;
+  color:#fff;
+  font-size:12px;
+}
+.order_list{
+  padding:0;
+}
+.order_page{
+  padding:10px;
+}
+.order_list table{
+  width: 100%;
+  table-layout:fixed;
+  border-bottom:1px solid #ddd;
+}
+.order_list table tr td{
+  border: 0;
+  padding: 0;
+  color:inherit;
+  border-bottom:1px solid #ddd;
+  font-size:11px;
+  border-right:1px solid #eee;
+  vertical-align:middle;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow:hidden;
+}
+.order_list table tr td:hover{
+  overflow:visible;
+}
+.hidden{
+  display:inline-block;
+  position:relative;
+  padding: 10px 5px;
+}
+.hidden:hover{
+  z-index:9999999;
+  background:#eee;
+  padding-right:10px;
+}
+.order_list table tr {
+  
+  transition-duration:0.5s;
+}
+.order_list table tr:hover {
+  background:#eee;
+  transition-duration:0.5s;
+}
+.order_list table tr:first-child td{
+  background: #466081;
+  color:#ffffff !important;
+  border:0;
+  padding: 13px 5px;
+  white-space: normal;
+}
+.order_list table tr td:last-child{
+  border-right:0;
+}
+.order{
+	padding:5px;
+	margin:5px;
+	font-size:12px;
+}
+b{
+	font-weight:bold;
+}
+.message{
+	font-size:12px;
+  background:#e9d551;
+  color:#fff;
+}
+#text {
+  font-size:12px;
+}
+.paging{
+  background:#f2f2f2;
+  padding: 5px 18px;
+}
+.paging a, .page_now{
+  display:inline-block;
+  box-sizing:border-box;
+  color:#555 !important;
+  padding: 1px 3px;
+}
+.order{
+  float:right;
+  display:inline-block;
+  text-align:center;
+  box-sizing:border-box;
+  text-decoration:none;
+  padding: 0 5px;
+}
+.main{
+  max-width: 800px;
+  margin:auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background:#fff;
+  box-shadow: 0 0 3px 2px rgba(0,0,0,0.2);
+}
+.order_name{
+  width: 120px;
+  display:inline-block;
+}
+.search_block, .order_block{
+  display:inline-block;
+  margin: 0;
+}
+.order_block{
+  float:right;
+  font-size: 12px;
+}
+input, select, option {
+  border:0;
+  background:rgba(0,0,0,0.05);
+  box-shadow: 0 0 2px 1px rgba(0,0,0,0.25);
+  padding: 5px 8px;
+  margin: 4px 0;
+  box-sizing:border-box;
+}
+input[type="submit"]{
+  background:#466081;
+  box-shadow:none;
+  color:#ddd;
+  cursor:pointer;
+}
+.order_page input, .order_page select, .order_page option{
+  width:230px;
+}
+input.search{
+  width:16px;
+  height:16px;
+  background:url('../image/icon_search.png') !important;
+  margin-left: -20px;
+  cursor:pointer;
+  opacity: 0.5;
+  transition-duration: 0.5s;
+}
+input.search:hover{
+  opacity:1;
+  transition-duration: 0.5s;
+}
+.show_all{
+  float:right;
+}
+.page_now{
+  background:#ccc;
+  border-radius:3px;
+}
+.main_bottom{
+  font-size:12px;
+  text-align:right;
+  background:#e6e6e6;
+  border-top:1px solid #fff;
+}
+.message#success{
+  background:#68c344  ;
+}
+.message#info{
+  background:#617da2  ;
+  padding:4px 5px;
+  font-size:9px;
+}
