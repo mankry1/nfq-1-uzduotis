@@ -64,7 +64,7 @@
     $Orders->SortBy($key, $sort);
   }
   
-  $OrdersPerPage = 5;
+  $OrdersPerPage = 10;
   
   // puslapiavimas
   $pages = ceil($Orders->Counter / $OrdersPerPage);

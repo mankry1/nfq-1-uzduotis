@@ -16,51 +16,51 @@ article, aside, canvas, details, embed,
 figure, figcaption, footer, header, hgroup, 
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video {
-	margin: 0;
-	padding: 0;
-	border: 0;
-	font-size: 100%;
-	font: inherit;
-	vertical-align: baseline;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
-	display: block;
+  display: block;
 }
 body {
-	line-height: 1;
+  line-height: 1;
 }
 ol, ul {
-	list-style: none;
+  list-style: none;
 }
 blockquote, q {
-	quotes: none;
+  quotes: none;
 }
 blockquote:before, blockquote:after,
 q:before, q:after {
-	content: '';
-	content: none;
+  content: '';
+  content: none;
 }
 table {
-	border-collapse: collapse;
-	border-spacing: 0;
+  border-collapse: collapse;
+  border-spacing: 0;
 }
 *{
-	font-size: 12px;
-	color:#333;
-	font-family: Arial !important;
+  font-size: 12px;
+  color:#333;
+  font-family: Arial !important;
 }
 a{
   color:inherit;
   text-decoration:none;
 }
 body{
-	background:#eeeeee;
+  background:#eeeeee;
   font-size:12px !important;
 }
 .main_top, .error_list, .message, .main_bottom{
-	font-size: 0;
+  font-size: 0;
   background:#f2f2f2;
   padding: 12px 18px;
   line-height:18px;
@@ -68,7 +68,9 @@ body{
 .error_list{
   background:#e95151;
   color:#fff;
-  font-size:12px;
+    line-height: 18px;
+  padding: 4px 5px;
+  font-size:9px;
 }
 .order_list{
   padding:0;
@@ -99,12 +101,16 @@ body{
 .hidden{
   display:inline-block;
   position:relative;
-  padding: 10px 5px;
+  padding: 12px 5px;
+  min-width:100%;
+  box-sizing:border-box;
 }
 .hidden:hover{
   z-index:9999999;
   background:#eee;
   padding-right:10px;
+  box-shadow:0px 0px 5px 0px rgba(0,0,0,0.5);
+  cursor:default;
 }
 .order_list table tr {
   
@@ -118,24 +124,33 @@ body{
   background: #466081;
   color:#ffffff !important;
   border:0;
-  padding: 13px 5px;
+  padding: 4px 5px;
   white-space: normal;
+  font-size:9px;
+  text-overflow: ellipsis;
+white-space: nowrap;
+overflow: hidden;
+    line-height: 18px;
 }
 .order_list table tr td:last-child{
   border-right:0;
 }
 .order{
-	padding:5px;
-	margin:5px;
-	font-size:12px;
+  padding:5px;
+  margin:5px;
+  font-size:12px;
 }
 b{
-	font-weight:bold;
+  font-weight:bold;
 }
 .message{
-	font-size:12px;
+  font-size:12px;
   background:#e9d551;
   color:#fff;
+    line-height: 18px;
+  padding: 4px 5px;
+  font-size:9px;
+  margin-bottom:1px;
 }
 #text {
   font-size:12px;
@@ -202,7 +217,6 @@ input.search{
   margin-left: -20px;
   cursor:pointer;
   opacity: 0.5;
-  transition-duration: 0.5s;
 }
 input.search:hover{
   opacity:1;

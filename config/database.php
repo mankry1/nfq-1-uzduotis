@@ -2,16 +2,16 @@
 
 class Database {
   
-	private $servername = "localhost";
-	private $username = "root";
-	private $password = "";
-	private $database = "nfq";
+  private $servername = "localhost";
+  private $username = "id5557117_nfq";
+  private $password = "nfq123";
+  private $database = "id5557117_nfq";
   public $db; 
 
   public function connect(){
     $this->db = new mysqli($this->servername, $this->username, $this->password, $this->database);
   }
-	
+  
   public function set_charset($charset){
     $this->db->set_charset($charset);
   }

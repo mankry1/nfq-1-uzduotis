@@ -1,0 +1,150 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:100');
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*{
+  font-size: 12px;
+  color:#333;
+  font-family: Arial !important;
+}
+a{
+  color:inherit;
+  text-decoration:none;
+}
+body{
+  background:#f36b21;
+  font-size:12px !important;
+}
+.main{
+  margin:auto;
+  position:fixed;
+  top:50%;
+  margin-top:-125px;
+  text-align:center;
+  font-size:0;
+  width:100%;
+}
+.block{
+  display:inline-block;
+  font-size:19px;
+  background:#f36b21;
+  box-sizing:border-box;
+  width:200px;
+  height:200px;
+  padding-top:93px;
+  margin:25px;
+  color:#fff;
+  border:4px solid #fff;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight:700;
+  /*box-shadow:inset 0px 0px 0px 10px rgba(0,0,0,0.3), inset 40px 50px 40px 0px rgba(255,255,255,0.2);*/
+  transition-duration:0.5s;
+  z-index:1;
+  position:relative;
+}
+.block:hover{
+  transform: scaleX(1.8) scaleY(1.8);
+  transition-duration:0.5s;
+  z-index:8000;
+}
+.block#github{
+  background:#fff;
+  color:#f36b21;
+}
+.nfq, .info{
+  background:#f36b21;
+  position:fixed;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  background-image:url('/nfq/image/akademijos-logo.png');
+  z-index:999999;
+  background-size:300px 300px;
+  background-position:center center;
+  background-repeat:no-repeat;
+}
+.info{
+  background-image:none;
+}
+.content{
+  text-align:center;
+  color:#fff;
+  font-size:45px;
+  position:fixed;
+  top:50%;
+  width:100%;
+  margin-top:-22px;
+  font-family: 'Roboto', sans-serif !important;
+  font-weight:100;
+}
+@media(max-width:800px){
+  body{
+    padding:60px 0;
+  }
+  .main{
+    position:static;
+    margin:0;
+  }
+  .block{
+    display:block;
+    margin:15px auto;
+    width:150px;
+    height:150px;
+    padding-top:69px;
+    font-size:14px;
+  }
+  .block:hover{
+    transform: scaleX(1.4) scaleY(1.4);
+  }
+  .content{
+    font-size:30px;
+  }
+}

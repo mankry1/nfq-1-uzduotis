@@ -3,41 +3,41 @@
 require_once("config/database.php");
 
 class Item {
+  
+  public $ID;
+  public $Type;
+  public $Name;
+  
+  public function Set ($ID, $Type, $Name) {
 	
-	public $ID;
-	public $Type;
-	public $Name;
-	
-	public function Set ($ID, $Type, $Name) {
-		
-		$this->ID = $ID;
-		$this->Type = $Type;
-		$this->Name = $Name;
-	}
+    $this->ID = $ID;
+    $this->Type = $Type;
+    $this->Name = $Name;
+  }
 }
 
 class Items {
-	
-	public $Counter = 0;
-	public $Item = array();
-	
-	public function Add (Item $Item) {
-		
-		$this->Item[$this->Counter] = $Item;
-		$this->Counter++;
-	}
-	
-	public function Get($Type, $ID, $Key) {
-		
-		$return = $ID;
+  
+  public $Counter = 0;
+  public $Item = array();
+  
+  public function Add (Item $Item) {
+    
+    $this->Item[$this->Counter] = $Item;
+    $this->Counter++;
+  }
+  
+  public function Get($Type, $ID, $Key) {
+    
+    $return = $ID;
     
     for($x = 0; $x < $this->Counter; $x++) {
       if($this->Item[$x]->ID == $ID && $this->Item[$x]->Type == $Type)
         $return = $this->Item[$x]->$Key;
     }
-		
-		return $return;
-	}
+    
+    return $return;
+  }
   
   public function GetByType($type, $list){
     for($x = 0; $x < $this->Counter; $x++) {
@@ -68,15 +68,15 @@ $Items = new Items;
 $query = $Database->query("SELECT * FROM `items`");
 
 while($row = $query->fetch_assoc()){
-	
-	$Item = new Item;
-	$Item->Set(
-		$row["ID"], 
-		$row["Type"], 
-		$row["Name"]
-	);
-	
-	$Items->Add($Item);
+  
+  $Item = new Item;
+  $Item->Set(
+    $row["ID"], 
+    $row["Type"], 
+    $row["Name"]
+  );
+  
+  $Items->Add($Item);
 }
 
 ?>

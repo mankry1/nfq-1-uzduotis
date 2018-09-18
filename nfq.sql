@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.5
+-- version 4.7.9
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: 2018 m. Vas 19 d. 03:10
--- Server version: 5.5.56-MariaDB
--- PHP Version: 7.0.27
+-- Host: 127.0.0.1:3306
+-- Generation Time: 2018 m. Rgs 18 d. 20:08
+-- Server version: 5.7.21
+-- PHP Version: 7.2.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -28,11 +28,13 @@ SET time_zone = "+00:00";
 -- Sukurta duomenų struktūra lentelei `items`
 --
 
-CREATE TABLE `items` (
-  `ID` int(10) NOT NULL,
+DROP TABLE IF EXISTS `items`;
+CREATE TABLE IF NOT EXISTS `items` (
+  `ID` int(10) NOT NULL AUTO_INCREMENT,
   `Type` text,
-  `Name` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `Name` text,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=40 DEFAULT CHARSET=utf8;
 
 --
 -- Sukurta duomenų kopija lentelei `items`
@@ -85,8 +87,9 @@ INSERT INTO `items` (`ID`, `Type`, `Name`) VALUES
 -- Sukurta duomenų struktūra lentelei `orders`
 --
 
-CREATE TABLE `orders` (
-  `ID` int(10) NOT NULL,
+DROP TABLE IF EXISTS `orders`;
+CREATE TABLE IF NOT EXISTS `orders` (
+  `ID` int(10) NOT NULL AUTO_INCREMENT,
   `Cpu` int(10) DEFAULT NULL,
   `Gpu` int(10) DEFAULT NULL,
   `Ram` int(10) DEFAULT NULL,
@@ -95,8 +98,9 @@ CREATE TABLE `orders` (
   `CardReader` int(10) DEFAULT NULL,
   `Customer` text,
   `Email` text,
-  `Phone` text
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+  `Phone` text,
+  PRIMARY KEY (`ID`)
+) ENGINE=InnoDB AUTO_INCREMENT=155 DEFAULT CHARSET=utf8;
 
 --
 -- Sukurta duomenų kopija lentelei `orders`
@@ -155,39 +159,8 @@ INSERT INTO `orders` (`ID`, `Cpu`, `Gpu`, `Ram`, `Motherboard`, `Hdd`, `CardRead
 (150, 15, 31, 5, 38, 10, 13, 'Ovidijus Jankauskas', 'ovyda13@yahoo.com', '861889603'),
 (151, 20, 31, 33, 36, 10, 14, 'Gintarė Kolomažnikovaitė', 'gintare.kolomaznikovaite@one.lt', '862116598'),
 (152, 22, 28, 6, 35, 12, 13, 'Robertas Balčiūnas', 'balciovke69@gmail.com', '864526519'),
-(153, 19, 27, 5, 9, 10, 13, 'Ina Katkuvienė', 'ina.katkuviene@one.lt', '860820896');
-
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `items`
---
-ALTER TABLE `items`
-  ADD PRIMARY KEY (`ID`);
-
---
--- Indexes for table `orders`
---
-ALTER TABLE `orders`
-  ADD PRIMARY KEY (`ID`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `items`
---
-ALTER TABLE `items`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=40;
-
---
--- AUTO_INCREMENT for table `orders`
---
-ALTER TABLE `orders`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=154;
+(153, 19, 27, 5, 9, 10, 13, 'Ina Katkuvienė', 'ina.katkuviene@one.lt', '860820896'),
+(154, 20, 32, 34, 39, 12, 13, 'Mantas Vaitiekūnas', 'mantas.kryzevicius@ktu.edu', '860665617');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
